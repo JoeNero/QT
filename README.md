@@ -1,11 +1,20 @@
-# QT_Study
+#  QT学习笔记
 
-	QT学习笔记
+	qcustomplot:官方画图
+	
+	QTPrj：自己的qt工程
+	
+	VS：
+	
+	基础:QT基础
+	
+	自定义控件:看该文件下README.md
+	
 	
 	QWidgetDemo文件夹下是他人写好的自定义控件，可以直接使用。也有demo文件
 	
 	自定义控件：
-	看该文件下README.md
+	
 			
 # 1 基础
 
