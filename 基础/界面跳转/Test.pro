@@ -1,11 +1,10 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2020-02-08T18:11:59
+# Project created by QtCreator 2020-02-12T10:36:32
 #
 #-------------------------------------------------
 
 QT       += core gui
-QT       += charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,11 +25,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-    mylable.cpp
+        widget.cpp \
+    form.cpp
 
 HEADERS += \
-    mylable.h
+        widget.h \
+    form.h
 
 FORMS += \
-        widget.ui
-CONFIG+=c++11
+        widget.ui \
+    form.ui
