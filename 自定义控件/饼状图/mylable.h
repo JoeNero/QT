@@ -9,6 +9,8 @@
 #include <QString>
 #include <QSlider>
 
+QT_CHARTS_USE_NAMESPACE
+
 class MyLable : public QWidget
 {
     Q_OBJECT
