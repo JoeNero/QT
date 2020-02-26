@@ -1,4 +1,6 @@
 # liunx 下注意点
+缺少:-1: error: 找不到 -lGL
+sudo apt-get install libgl1-mesa-dev
 
 使用以下模块需要 实现下载这个 qt会自动查找
 
@@ -7,6 +9,12 @@ sudo apt-get install qtmultimedia5-dev
 如果不行则加:
 
 sudo apt-get install libpul se-dev
+
+视频相关控件需要安装如下内容
+
+```
+apt-get install libpulse-dev
+```
 
 ```
 QT       += multimedia
