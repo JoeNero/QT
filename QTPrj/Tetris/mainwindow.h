@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include "controlpanel.h"
-#include "item.h"
+#include "Item.h"
 
 namespace Ui {
 class MainWindow;

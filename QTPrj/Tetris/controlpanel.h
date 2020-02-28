@@ -2,7 +2,7 @@
 #define CONTROLPANEL_H
 
 #include <QWidget>
-#include "item.h"
+#include "Item.h"
 #include "qlabel.h"
 
 

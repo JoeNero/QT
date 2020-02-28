@@ -1,4 +1,11 @@
 # liunx 下注意点
+
+编译太慢,更改
+
+-j 4       4为线程 <= cpu的线程
+
+![1582855271722](/tmp/1582855271722.png)
+
 缺少:-1: error: 找不到 -lGL
 sudo apt-get install libgl1-mesa-dev
 
