@@ -1,4 +1,8 @@
-# liunx 下注意点
+# linux 下注意点
+
+找不到mysql.h文件
+
+sudo apt-get install libmysqlclient-dev
 
 编译太慢,更改
 
@@ -23,6 +27,11 @@ apt-get install libpulse-dev
 
 ```
 QT       += multimedia
+```
+libusbzhic库
+```shell
+sudo apt-get install libusb-dev
+sudo apt-get install libusb-1.0-0-dev
 ```
 
 # 布局管理
@@ -220,8 +229,6 @@ QBarSeries类表示的是柱状图数据，需要将相应的QBarSet添加进来
 
 柱状图关系示意如下:
 
-![柱状图示意](/media/xtt/workspace/GitHub/QT/基础/柱状图示意.png)
-
 ## 饼状图
 
 ```cpp
@@ -235,8 +242,6 @@ QPieSeries是一块饼图
 ```
 
 QPieSlice是饼图上的碎片
-
-![饼状图示意](/media/xtt/workspace/GitHub/QT/基础/饼状图示意.png)
 
 # QCustomPlot
 
@@ -260,15 +265,96 @@ QT       += core gui printsupport
 
 在debug文件下将.so文件后缀的复制到新建工程的debug文件下
 
-![1582179556607](/media/xtt/workspace/GitHub/QT/基础/1582179556607.png)
 
-并将相应的头文件添加到目标工程中![1582179823790](/media/xtt/workspace/GitHub/QT/基础/1582179823790.png)
+
+并将相应的头文件添加到目标工程中
 
 在.pro里面添加 如下 格式 -L./lib -l(文件名)  因为直接放在debug文件下所以直接 在该文件夹下找
 
 ```
 LIBS +=  -L -llibdll
 ```
+# Linux 下opencv的搭建
+
+在.pro文件中添加如下内容,根据个人情况
+
+```
+INCLUDEPATH += /usr/local/include \
+                /usr/local/include/opencv4 \
+
+LIBS += /usr/local/lib/libopencv*
+```
+
+有的人是
+
+```
+INCLUDEPATH += /usr/local/include \
+                /usr/local/include/opencv \
+                /usr/local/include/opencv2
+
+LIBS += /usr/local/lib/lib*
+```
+
+出现这个错误，只需要在对应的文件中添加头文件
+#include <opencv2/highgui/highgui_c.h>
+
+```shell
+/home/xtt/prj/Qt/pack/OpenNCC_View/OpenNCC_View/widget.cpp:330: error: ~~‘cvGetWindowHandle’~~ was not declared in this scope
+                 if (!cvGetWindowHandle("OpenNCC"))
+                      ^~~~~~~~~~~~~~~~~
+```
 
 
 
+
+
+# Linux 下qt的打包
+
+将release 版本下的hi可执行文件拷到你新建的bin文件夹下
+
+新建一个打包的脚本pack.sh
+
+```shell
+#!/bin/sh
+exe="OpenNCC_View" #需发布的程序名称
+des="/home/xtt/Qt/OpenNCC_View/bin" #新建目录的完整路径
+deplist=$(ldd $exe|awk '{if (match($3,"/")){printf("%s "),$3}}')
+cp $deplist $des
+```
+
+运行脚本 sh pack.sh会在该文件夹下添加一些.so动态库
+
+然后编写一个部署脚本
+
+文件名和你的项目名字一致，这里的项目名字是OpenNCC_View，所以部署脚本是OpenNCC_View.sh
+
+以下是该脚本的内容
+
+```shell
+#!/bin/sh  
+appname=`basename $0 | sed s,\.sh$,,`  
+dirname=`dirname $0`  
+tmp="${dirname#?}"  
+if [ "${dirname%$tmp}" != "/" ]; then  
+dirname=$PWD/$dirname  
+fi  
+LD_LIBRARY_PATH=$dirname  
+export LD_LIBRARY_PATH  
+$dirname/$appname "$@"
+
+```
+
+# Window下打包程序
+Win+r 打开dos命令 cmd
+
+输入命令：
+
+cd /d H:\QT\Test\release
+
+必须要加/d 不然没办法进入目录
+
+Qt Quick Application版本:
+
+windeployqt  Test.exe
+
+Test.exe 为release版本的exe
