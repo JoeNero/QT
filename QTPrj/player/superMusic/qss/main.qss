@@ -1,0 +1,200 @@
+QWidget#Widget{
+	background-color: rgba(0, 255, 224, 100%); 
+}
+
+
+QWidget{
+	color: white;
+	font-family: "Microsoft YaHei";
+	font-size:12pt;
+}
+
+QPushButton{
+	background:transparent;
+}
+
+
+#func_listWidget{
+	 border: none;
+	  margin-left:0px;
+	  margin-right:0px;
+	background-color: rgba(255, 255, 255, 10%); 
+}
+
+QListWidget{
+	 border: none;
+	 outline:0px;
+	 margin-left:10px;
+	 margin-right:5px;
+	background-color: rgba(255, 255, 255, 10%); 
+}
+
+
+QSlider{
+	background-color: rgba(25, 38, 58, 0%);
+	max-height: 2px;
+}
+QSlider::groove:horizontal{
+	/*background:transparent;*/
+    height:1px;
+}
+QSlider::handle:horizontal{
+	height:1px;
+    width:1px;
+    background-color: #316bfc;
+	border-radius: 1px;
+}
+
+/*划过*/
+QSlider::sub-page:horizontal{
+    background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(231,80,229, 255), stop:1 rgba(7,208,255, 255));
+    max-height:1px;
+}
+
+/*未划过*/
+QSlider::add-page:horizontal{
+    background-color: rgb(87, 97, 106);
+    height:2px;
+}
+
+ 
+ /*QListWidget#func_listWidget*/
+ 
+QListWidget::item:hover
+{
+    show-decoration-selected:5;
+		border:0px;
+	border-radius: 10px;
+    background:rgba(0,0,0, 25%);
+}
+ 
+QListWidget::item:selected
+{
+    /*border:0px;*/
+    background:rgba(254,239,2, 50%);
+	border:0px;
+	border-radius: 10px;
+    padding:0px;
+    margin:0px;
+    color:red;
+}
+ 
+/*上次选择后保留的状态，鼠标离开后显示*/
+QListWidget::item:selected:!active
+{
+	border:0px;
+	border-radius: 10px;
+    border-width:0px;
+    background:rgba(0,0,0, 25%);
+}
+ 
+ 
+/*设置表头属性*/
+QTableWidget QHeaderView::section
+{
+    background-color:#F0F0F0;  /*lightgray*/
+    /*color:black;*/
+    /*padding-left:4px;*/
+    /*border:3px solid red;*/   /*表头边框线的宽度、颜色*/
+    /*border:1px solid gray;*/
+}
+QScrollBar {
+    border: none;
+    background: rgba(0,0,0,0);
+    width: 10px;
+    margin: 0px 0 0px 0;
+}
+QScrollBar::handle {
+    background: rgba(0,0,0,20%);
+    min-height: 10px;
+	max-height: 10px;
+    border-radius: 5px;
+    border: none;
+}
+QScrollBar::add-line {
+    border: 0px solid grey;
+    background: #32CC99;
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+QScrollBar::sub-line {
+    border: 0px solid grey;
+    background: #32CC99;
+    height: 0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+QScrollBar::add-page, QScrollBar::sub-page {
+    background: none;
+    width: 0px;
+    height: 0px;
+}
+
+
+QTabWidget::pane {
+	border:0px solid #C3C7CB;
+	margin-left:10px;
+	margin-right:5px;
+}
+
+QTabWidget::tab-bar {
+	left:0px;
+}
+
+/* 标签外形设置 */
+QTabBar::tab {
+	background:rgba(0,0,0,0%);
+	min-width:60px;
+	padding:8px;
+	border: 2px;
+}
+
+/* 标签被选中时或鼠标悬浮时 */
+QTabBar::tab:selected,QTabBar::tab:hover {
+	background:rgba(0,0,0,0);
+	color:#feef02;
+}
+
+/* 标签被选中时 */
+QTabBar::tab:selected {
+	border:2px;
+	border-color:#9B9B9B;
+	border-bottom-color:#feef02;
+}
+
+/* 标签未被选中时 */
+QTabBar::tab:!selected {
+	margin-top:2px;
+}
+
+/* 标签被选中时,外框向外扩大 */
+QTabBar::tab:selected {
+	margin-left:-4px;
+	margin-right:-4px;
+}
+
+/* 最左边的标签被选中时,外框不变化 */
+QTabBar::tab:first:selected {
+	margin-left:0px;
+}
+
+/* 最右边的标签被选中时,外框不变化 */
+QTabBar::tab:last:selected {
+	margin-right:0;
+}
+
+
+#func_listWidget::item:selected
+ {
+	background:rgba(255,255,255, 30%);
+	border:0px;
+	border-radius: 10px;
+    padding:0px;
+    margin:0px;
+    color:black;
+ }
+ 
+#pushButton_3{
+	background-color: rgb(255, 222, 52);
+}

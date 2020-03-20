@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/circleMask.png</file>
+        <file>images/defaultCenterPicture.png</file>
+        <file>images/defaultDisk.png</file>
+        <file>images/disk.png</file>
+        <file>images/downloadIcon.png</file>
+        <file>images/downloadOkIcon.png</file>
+        <file>images/expand.png</file>
+        <file>images/fold.png</file>
+        <file>images/magnetNeedle.png</file>
+        <file>images/musicTable.png</file>
+        <file>images/networkPicture.jpg</file>
+        <file>images/originalLeftButton.png</file>
+        <file>images/originalPlayButton.png</file>
+        <file>images/originalRightButton.png</file>
+        <file>images/playButton.png</file>
+        <file>images/pressedExpand.png</file>
+        <file>images/pressedFold.png</file>
+        <file>images/pressLeftButton.png</file>
+        <file>images/pressPlayButton.png</file>
+        <file>images/pressRightButton.png</file>
+        <file>images/searchIcon.png</file>
+        <file>images/Slider_bar.png</file>
+        <file>images/Slider_handle.png</file>
+        <file>images/soundIcon.png</file>
+        <file>images/volume.png</file>
+        <file>images/pic.png</file>
+        <file>images/loading.gif</file>
+    </qresource>
+</RCC>

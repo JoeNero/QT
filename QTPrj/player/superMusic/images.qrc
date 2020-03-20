@@ -1,0 +1,40 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/index.png</file>
+        <file>images/add.png</file>
+        <file>images/cyclic.png</file>
+        <file>images/down.png</file>
+        <file>images/media.png</file>
+        <file>images/more.png</file>
+        <file>images/next.png</file>
+        <file>images/order.png</file>
+        <file>images/paly.png</file>
+        <file>images/pause.png</file>
+        <file>images/prev.png</file>
+        <file>images/rand.png</file>
+        <file>images/search.png</file>
+        <file>images/single.png</file>
+        <file>images/paly2.png</file>
+        <file>images/word.png</file>
+        <file>images/list.png</file>
+        <file>images/music1.ico</file>
+        <file>images/local1.ico</file>
+        <file>images/lyric1.ico</file>
+        <file>images/static_img.png</file>
+        <file>images/static_img1.png</file>
+        <file>images/static_img2.png</file>
+        <file>images/static_img3.png</file>
+        <file>images/static_img4.png</file>
+        <file>images/static_img5.png</file>
+        <file>images/static_img6.png</file>
+        <file>images/static_img7.png</file>
+        <file>images/static_img8.png</file>
+        <file>images/static_img9.png</file>
+        <file>images/static_img10.png</file>
+        <file>images/static_img11.png</file>
+        <file>images/static_img12.png</file>
+        <file>images/static_img13.png</file>
+        <file>images/logo.ico</file>
+        <file>qss/main.qss</file>
+    </qresource>
+</RCC>
