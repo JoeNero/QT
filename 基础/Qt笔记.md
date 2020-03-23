@@ -1,4 +1,4 @@
-# linux 下注意点
+# 1 linux 下注意点
 
 找不到mysql.h文件
 
@@ -34,9 +34,9 @@ sudo apt-get install libusb-dev
 sudo apt-get install libusb-1.0-0-dev
 ```
 
-# 布局管理
+# 2 布局管理
 
-## QGridLayout网格布局
+## 2.1 QGridLayout网格布局
 
 ```cpp
 layout->setRowStretch(int row, int stretch);//设置行比例系数
@@ -52,7 +52,17 @@ layout->addWidget(&TestBtn3, 1, 0);
 layout->addWidget(&TestBtn4, 1, 1);
 ```
 
-# 控件：
+# 3 控件：
+
+## QLable
+
+显示数字
+
+setText ( const QString & )setText参数必须是QString类型才可以 你的变量如果是整形，可以直接转换，比如QString()::number( int num).
+
+```c++
+ui->labelTime->setText(QString::number(times));
+```
 
 ## QLCDNumber：
 
@@ -70,7 +80,7 @@ QLCDNumber有以下几种模式：
 
 lcdNum->setDecMode();
 
-# QTimer
+## QTimer
 
 Q_DECL_OVERRIDE也就是c++的override
 
@@ -109,7 +119,37 @@ start()之后，每秒都会调用update()
 QTimer::singleShot(200, this, SLOT(updateCaption()));
 ```
 
-# QChart
+QTimer和lable配合显示系统时间
+
+头文件
+
+```c++
+#include <QTimer>
+```
+
+构造函数
+
+```c++
+//日期/时间显示
+QTimer *timer = new QTimer(this);
+connect(timer,SIGNAL(timeout()),this,SLOT(timerUpdate()));
+timer->start(1000);
+```
+
+定义成员函数timerUpdate()实现用户界面显示时间：
+
+```c++
+void userwindow::timerUpdate()
+{
+    QDateTime time = QDateTime::currentDateTime();
+
+    QString str = time.toString("yyyy-MM-dd hh:mm:ss dddd");
+
+    ui->dateTime->setText(str);
+}
+```
+
+# 4 QChart
 
 .pro文件添加模块
 
@@ -243,7 +283,7 @@ QPieSeries是一块饼图
 
 QPieSlice是饼图上的碎片
 
-# QCustomPlot
+# 5 QCustomPlot
 
 ```
 QT       += core gui printsupport
