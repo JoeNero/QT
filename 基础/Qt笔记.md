@@ -349,8 +349,8 @@ LIBS += /usr/local/lib/lib*
 
 
 # Linux 下qt的打包
-
-将release 版本下的hi可执行文件拷到你新建的bin文件夹下
+## 脚本打包
+ 将release 版本下的hi可执行文件拷到你新建的bin文件夹下
 
 新建一个打包的脚本pack.sh
 
@@ -383,6 +383,9 @@ export LD_LIBRARY_PATH
 $dirname/$appname "$@"
 
 ```
+## appimage 打包
+
+https://gitee.com/joenero/note1/blob/master/Qt/linuxqt%E6%89%93%E5%8C%85.md
 
 # Window下打包程序
 Win+r 打开dos命令 cmd
